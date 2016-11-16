@@ -1,0 +1,181 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "date": "2016-11-19",
+        "time": "18:00",
+        "comment": "4차 범국민 행동 7시 30분 행진",
+        "장소": "광화문 광장"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.97712659835815,
+          37.568328422615245
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "date": "2016-11-17",
+        "time": "19:00",
+        "comment": "박근혜 퇴진을 위한 인천 시민 대행진",
+        "장소": "부평역 앞"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.72334671020506,
+          37.49002109016065
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "date": "2016-11-19",
+        "time": "17:00",
+        "comment": "박근혜 퇴진 충북 범도민 시국대회",
+        "장소": "충북도청 앞"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.49068379402159,
+          36.63564161854621
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "date": "2016-11-16",
+        "time": "18:00",
+        "comment": "충남 시국대회",
+        "장소": "천안 야우리"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.15644836425781,
+          36.81917959744268
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "date": "2016-11-19",
+        "time": "17:00",
+        "comment": "대전 10만 시국대회",
+        "장소": "둔산동 타임월드"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.37820804119109,
+          36.351784270641375
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "date": "2016-11-19",
+        "time": "17:00",
+        "comment": "전주 1만 도민대회",
+        "장소": "전주 관통로 사거리"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.14681386947632,
+          35.81858961375933
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "date": "2016-11-18",
+        "time": "18:00",
+        "comment": "군산 전국동시촛불",
+        "장소": "롯데마트 사거리"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.71568632125853,
+          35.96409602157357
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "date": "2016-11-19",
+        "time": "18:00",
+        "comment": "광주 10만 시국촛불",
+        "장소": "518 광장"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.91863298416138,
+          35.14809985446331
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "date": "2016-11-19",
+        "time": "17:00",
+        "comment": "대구 10만 촛불",
+        "장소": "중앙네거리-반월당"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.593533039093,
+          35.86719536110632
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "date": "2016-11-19",
+        "time": "19:30",
+        "comment": "박근혜 하야 10만 부산 시국대회",
+        "장소": "서면 쥬디스태화 옆 사거리"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.05932545661926,
+          35.15466588970195
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "date": "2016-11-19",
+        "time": "16:00",
+        "comment": "박근혜 정권 퇴진 2차 울산 시민대회",
+        "장소": "삼산롯데백화점"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3389993906021,
+          35.53938533343041
+        ]
+      }
+    }
+  ]
+}
