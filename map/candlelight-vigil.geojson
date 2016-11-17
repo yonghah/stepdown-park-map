@@ -208,6 +208,70 @@
           37.5219801715665
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "date": "2016-11-19",
+        "time": "16:00",
+        "comment": "남원 전국동시촛불",
+        "장소": "남문사거리"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.37994074821471,
+          35.40629633904323
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "date": "2016-11-19",
+        "time": "18:30",
+        "comment": "김제 전국동시촛불",
+        "장소": "신협"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.89204692840576,
+          35.79894100856681
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "date": "2016-11-18",
+        "time": "18:00",
+        "comment": "서귀포지역 시민촛불 행진",
+        "장소": "일호광장"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.56096577644348,
+          33.25249671225829
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "date": "2016-11-19",
+        "time": "18:00",
+        "comment": "제주 전국동시촛불",
+        "장소": "제주시청 민원실 앞 도로"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.53003454208374,
+          33.49936438328361
+        ]
+      }
     }
   ]
 }
