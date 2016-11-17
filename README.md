@@ -14,6 +14,6 @@
 * [map/candlelight-vigil.geojson](https://github.com/yonghah/stepdown-park-map/blob/master/map/candlelight-vigil.geojson) 에 데이터가 저장되어 있습니다.
 * geojson 형식으로 작성되어 편리하게 기존의 지도 서비스 위에 추가할 수 있습니다.
 * 예제: http://www-personal.umich.edu/~yonghah/candles/
-
+   - master branch의 변경이 반영됩니다.
 
 
