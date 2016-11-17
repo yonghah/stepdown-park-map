@@ -5,6 +5,7 @@
     <title></title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.26.0/mapbox-gl.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.26.0/mapbox-gl.css' rel='stylesheet' />
     <style>
         body { margin:0; padding:0; }
@@ -25,47 +26,68 @@ var map = new mapboxgl.Map({
 
 var mapUrl = 'https://raw.githubusercontent.com/yonghah/stepdown-park-map/master/map/candlelight-vigil.geojson';
 
-map.on('load', function () {
-    map.addSource('points', {
-        "type": "geojson",
-        "data": mapUrl
-    });
-    map.addLayer({
-        "id": "candles",
-        "type": "circle",
-        "source": "points",
-        "paint": {
-            "circle-radius": 10,
-            "circle-color": "#da3",
-            "circle-opacity": 0.6
+$.getJSON(mapUrl, function(data) { 
+    // test whether an event is past one or not
+    for (var i = data.features.length - 1; i >= 0; i--) {
+        var p =data.features[i].properties;
+        var tTime = new Date(p["date"] + "T" + p["time"] + "+09:00");
+        p["tTime"] = tTime;
+        if (tTime > new Date()) {
+            p["isPast"] = "false";
+        } else {
+            p["isPast"] = "true";
         }
-    });
-});
-
-var popup = new mapboxgl.Popup({
-    closeButton: false,
-    closeOnClick: false
-});
-
-map.on('mousemove', function(e) {
-    var features = map.queryRenderedFeatures(e.point, { layers: ['candles'] });
-    map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
-
-    if (!features.length) {
-        popup.remove();
-        return;
     }
-
-    var feature = features[0];
-
-    popup.setLngLat(feature.geometry.coordinates)
-        .setHTML(feature.properties.comment + "<br>@" + 
-            feature.properties["장소"] + "<br>" +
-            feature.properties.date + " " + 
-            feature.properties.time)
-        .addTo(map);
+    drawMap(data);
 });
 
+function drawMap(data) {
+    map.on('load', function () {
+        map.addSource('points', {
+           "type": "geojson",
+           "data": data
+        });
+        map.addLayer({
+           "id": "candles",
+           "type": "circle",
+           "source": "points",
+           "paint": {
+               "circle-radius": 10,
+               "circle-color": {
+                    'property': 'isPast',
+                    'type': 'categorical',
+                    "stops": [
+                        ["false", "#E3E816"],
+                        ["true", "#DD6421"],
+                    ]
+                },
+               "circle-opacity": 0.6
+           }
+        });
+    });
+
+    var popup = new mapboxgl.Popup({
+       closeButton: false,
+       closeOnClick: false
+    });
+
+    map.on('mousemove', function(e) {
+       var features = map.queryRenderedFeatures(e.point, { layers: ['candles'] });
+       map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
+
+       if (!features.length) {
+           popup.remove();
+           return;
+       }
+       var feature = features[0];
+       popup.setLngLat(feature.geometry.coordinates)
+           .setHTML(feature.properties.comment + "<br>@" + 
+               feature.properties["장소"] + "<br>" +
+               feature.properties.date + " " + 
+               feature.properties.time)
+           .addTo(map);
+    }); 
+}
 
 </script>
 </body>
