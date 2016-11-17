@@ -59,7 +59,10 @@ map.on('mousemove', function(e) {
     var feature = features[0];
 
     popup.setLngLat(feature.geometry.coordinates)
-        .setHTML(feature.properties.comment + "<br>@" + feature.properties["장소"])
+        .setHTML(feature.properties.comment + "<br>@" + 
+            feature.properties["장소"] + "<br>" +
+            feature.properties.date + " " + 
+            feature.properties.time)
         .addTo(map);
 });
 

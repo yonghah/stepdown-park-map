@@ -16,4 +16,6 @@
 * 예제: http://www-personal.umich.edu/~yonghah/candles/
    - master branch의 변경이 반영됩니다.
 
+## 할 일
 
+* 시간 범위 지정 콘트롤 추가하기
